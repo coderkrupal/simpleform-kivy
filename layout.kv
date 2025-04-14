@@ -1,0 +1,19 @@
+#:kivy 2.3.0
+<MyLayout>
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+
+        padding:20
+        spacing:20
+
+        Button:
+            text:"box no 1"
+        Button:
+            text:"box no 2"
+        Button:
+            text:"box no 3"
+            size_hint:(None,None)
+            pos_hint:{'center_x':0.5}
+            width:100
+            height:50

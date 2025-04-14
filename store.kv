@@ -1,0 +1,56 @@
+#:kivy 2.3.0
+#:import utils kivy.utils
+
+<Button>
+    background_color:utils.get_color_from_hex('#00FFFF')
+    size_hint:(None,None)
+    height:50
+    width:300
+    pos_hint:{'center_x':0.5}
+
+<PizzaBook>
+    canvas.before:
+        Color:
+            rgba:(0,1,1,0   )
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    name:name
+    pizza:pizza
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+
+        padding:50
+        spacing:20
+
+        Image:
+            source: 'grilledchicken.webp'
+
+        Label:
+            background_color:(0,0,1,1)
+            font_size:45
+            color:(0,0,1,1)
+            text:"Enter your name"
+        TextInput:
+            id:name
+            background_color:utils.get_color_from_hex('#d1d1d1')
+            multiline:False
+ 
+        Label:
+            font_size:45
+            color:(0,0,1,1)
+            text:"Enter your favourite pizza name"
+            
+        TextInput:
+            id:pizza
+            multiline:False
+            background_color:utils.get_color_from_hex('#d1d1d1')
+
+        Button:
+            text:"Book Order"
+
+        Button:
+            text:"clear form"
+            on_press:root.Press()
+

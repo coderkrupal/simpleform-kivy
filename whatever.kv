@@ -1,4 +1,5 @@
 #:kivy 2.3.0
+#:import utils kivy.utils
 
 <MyGridLayout>
     name:name
@@ -24,7 +25,10 @@
 
         Button:
             text:"submit" 
-            on_press:root.press()      
+            background_color:utils.get_color_from_hex('#00FFFF')
+            on_press:root.press()
+            
+                
                 
     
     
